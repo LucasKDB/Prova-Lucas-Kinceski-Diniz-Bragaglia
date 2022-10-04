@@ -1,0 +1,42 @@
+### Listar os funcionários
+GET https://localhost:5001/api/folha/listar
+
+### Cadastrar um funcionário
+POST https://localhost:5001/api/folha/cadastrar
+Content-Type: application/json
+
+{
+    "valorhora" : 50.00,
+    "quantidadehoras" : 100,
+    "salariobruto" : 100.00,
+    "renda" : 100.00,
+    "inss" :100.00 ,
+    "fgts" : 100.00,
+    "salarioliquido" : 100.00,
+    "funcionario" : {
+        "funcionarioid" : 26,
+        "nome" : "Diogo",
+        "cpf" : "12312312312",
+        "email" : "asd@asd.com",
+        "criadoEm" : "1900-09-20",
+        "nascimento" : "1900-09-20"
+}
+}
+    
+
+
+### Buscar um funcionário pelo CPF
+GET https://localhost:5001/api/folha/buscar/1234567891
+
+### Deletar um funcionário pelo Id
+DELETE https://localhost:5001/api/folha/deletar/4
+
+### Alterar um funcionário
+PATCH  https://localhost:5001/api/folha/alterar
+Content-Type: application/json
+
+{
+    "id" : 5,
+    "nome" : "Diogo Steinke Deconto Modificado Teste",
+    "cpf" : "123456789"
+}
